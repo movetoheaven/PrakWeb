@@ -18,7 +18,7 @@
     <ul class="nav-item">
         <li><a href="index.php">home</a></li>
         <li><a href="portofilio.php">about us</a></li>
-        <li><a href="#">contacts</a></li>
+        <li><a href="contact/contact_us.php">contacts</a></li>
         <li><a href="#">review</a></li>
 
         <li>

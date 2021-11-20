@@ -111,66 +111,16 @@ body{
   }
 
   .content-container{
-    width: 1200px;
-    margin: 0 auto;
+      width: 900px;
+      margin: 73px auto;
   }
 
-  .contact-form {
-      margin-top:10px;
-    font-family: "Poppins, sans-serif";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    letter-spacing: 0.08em;
-    color: #000000;
-  }
-
-  .contact-input{
-    height: 44px;
-    width: 100%;
-    background: #FFFFFF;
-    border: 2px solid #000000;
-    box-sizing: border-box;
-  }
-
-  textarea{
-    height: 124px;
-    width: 100%;
-    background: #FFFFFF;
-    border: 2px solid #000000;
-    box-sizing: border-box;
-  }
-
-  .contact-name {
-    font-family: "Poppins, sans-serif";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    letter-spacing: 0.08em;
-    color: #000000;
-  }
-
-  button{
-    width: 159px;
-    height: 55px;
-    background: black;
-    color: white;
-    border-radius: 15px;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: bold;
+  .text{
+      margin-top: 30px;
+    font-family: "Poppins",sans-serif;
+    font-style: italic;
+    font-weight: 600;
     font-size: 18px;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    }
-  
-    button:hover{
-      background: white;
-      color: black;
-      border:1px solid #000000;
-    }
-
+    letter-spacing: 0.08em;    
+    color: #000000;
+  }

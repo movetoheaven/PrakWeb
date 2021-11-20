@@ -36,7 +36,7 @@
         </li>
     </ul>
 
-    <a href="#"><button class="sign-in">Sign In</button></a>
+    <a href="login_register/login.php"><button class="sign-in">Sign In</button></a>
 </div>
 
 <div class="content-container">

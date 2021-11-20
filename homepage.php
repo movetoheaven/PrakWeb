@@ -55,26 +55,5 @@
   </div>
 </div>
 
-
-<!-- <button><a href="#">Contact Us</a></button>
-
-<div class="navbar">
-  <a href="index.php">Home</a>
-  <a href="portofilio.php">About Us</a>
-  <div class="dropdown">
-    <button class="dropbtn">Portofolio
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Photography</a>
-      <a href="#">Videography</a>
-      <a href="#">UI</a>
-      <a href="#">Web Development</a>
-      <a href="#">Android Development</a>
-    </div>
-  </div> 
-  
-</div> -->
-
 </body>
 </html>

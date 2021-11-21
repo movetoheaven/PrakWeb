@@ -1,8 +1,8 @@
-body {
+body{
     font-family: "Poppins", sans-serif;
-  }
+}
 
-  .sign-in{
+.sign-in{
     width: 159px;
     height: 55px;
     background: black;
@@ -23,13 +23,12 @@ body {
     .sign-in:hover{
       background: white;
       color: black;
+      border:1px solid #000000;
     }
-  
-  
-  
-  .nav-container{
+
+.nav-container{
     width: 1200px;
-    margin: 0 auto;
+    margin: 8px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,7 +50,7 @@ body {
   
   .nav-item li{
     list-style: none;
-    margin-top: auto;
+    margin-top: 16px;
     
   }
   
@@ -111,103 +110,15 @@ body {
     display: block;
   }
 
-  .content{
-    width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+  .content-container{
+      width: 1200px;
+      margin: 73px auto;
   }
 
-
-.input-form{
-    width: 448px;
-    height: 50px;
-    margin-top: 68px;
-    background: #E9E9E9;
-    border-radius: 5px;
-    border-style: none;
+  .content-container h2 {
     font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-size: 18px;
-}
-
-input[type=text], select, textarea {
-    padding: 20px;
-    border: none;
-    resize: vertical;
-}
-
-input[type=email], select, textarea {
-  padding: 20px;
-  border: none;
-  resize: vertical;
-}
-
-input[type=password], select, textarea {
-    padding: 20px;
-    border: none;
-    resize: vertical;
-}
-
-.btn-input{
-    width: 300px;
-    height: 50px;
-    margin-top: 100px;
-    border-radius: 5px;
-    border-style: none;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    background: #505050;
-    color: white;
-}
-
-.btn-input:hover{
-    background: white;
-    color: #505050;
-    border-style: solid;
-
-}
-
-a{
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    color: #505050;
-}
-
-p{
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    color: #505050;
-}
-
-.p1{
-    margin-top: 17px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-}
-
-.p2{
-    margin-top: 62px;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 15px;
-}
-.p3{
-    font-style: italic;
-    font-weight: normal;
-    font-size: 18px;
-}
-
-.text{
-    margin-top: 50px;
-    font-family: "Poppins",sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
-
-
-    color: #000000;
-}
+    margin: 0px auto;
+  }

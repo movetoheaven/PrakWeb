@@ -19,9 +19,9 @@
 
         <ul class="nav-item">
             <li><a href="../index.php">home</a></li>
-            <li><a href="portofilio.php">about us</a></li>
-            <li><a href="#">contacts</a></li>
-            <li><a href="#">review</a></li>
+            <li><a href="../about/about_us.php">about us</a></li>
+            <li><a href="../contact/contact_us.php">contacts</a></li>
+            <li><a href="../review/review.php">review</a></li>
 
             <li>
             <div class="dropdown">
@@ -29,7 +29,7 @@
                 <i class="fa fa-caret-down"></i>
                 </a>
                 <div class="dropdown-content">
-                <a href="#">Photography</a>
+                <a href="../porto_photography/porto-photo.php">Photography</a>
                 <a href="#">Videography</a>
                 <a href="#">UI</a>
                 <a href="#">Web Development</a>
@@ -38,21 +38,23 @@
             </li>
         </ul>
 
-        <a href="register.php"><button class="sign-in">Sign Up</button></a>
+        <a href="login.php"><button class="sign-in">Sign In</button></a>
     </div>
     <div class="content">
-        <div class="text">Sign In</div>             
+        <div class="text">Sign Up</div>             
         <form action="#" method="post">
             <input class="input-form" type="text" name="user" placeholder="Username">
             <br>
+            <input class="input-form" type="text" name="email" placeholder="Email">
+            <br>
             <input class="input-form" type="password" name="pass" placeholder="Password">
             <br>
-            <button class="btn-input" type="submit" value="login">Sign In</button>
+            <button class="btn-input" type="submit" value="login">Sign Up</button>
             </form>
 
-            <div class="p1"><a href="#">Forgot password?</a></div>
-            <div class="p2">Don't have account?</div>
-            <div class="p3"><a href="register.php">Sign Up</a></div>
+            
+            <div class="p2">Have account?</div>
+            <div class="p3"><a href="login.php">Sign In</a></div>
     </div>
 </body>
 </html>

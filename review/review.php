@@ -32,7 +32,7 @@
               <i class="fa fa-caret-down"></i>
             </a>
             <div class="dropdown-content">
-              <a href="#">Photography</a>
+              <a href="../porto_photography/porto-photo.php">Photography</a>
               <a href="#">Videography</a>
               <a href="#">UI</a>
               <a href="#">Web Development</a>
@@ -63,9 +63,71 @@
   </div>
 </div>
 
+<div class="content-container">
+  <div class="row">
+    <div class="col-2">
+      <img src="../images/bg_index.png" alt="" class="profile">
+      <p>Richard Koding</p>
+    </div>
+    <div class="col-9">
+      <div class="border">
+        <p>Review Here</p>
+      </div>
+      <!-- looping php -->
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="content-container">
+  <div class="row">
+    <div class="col-2">
+      <img src="../images/bg_index.png" alt="" class="profile">
+      <p>Richard Koding</p>
+    </div>
+    <div class="col-9">
+      <div class="border">
+        <p>Review Here</p>
+      </div>
+      <!-- looping php -->
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="content-container">
+  <div class="row">
+    <div class="col-2">
+      <img src="../images/bg_index.png" alt="" class="profile">
+      <p>Richard Koding</p>
+    </div>
+    <div class="col-9">
+      <div class="border">
+        <p>Review Here</p>
+      </div>
+      <!-- looping php -->
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+    </div>
+  </div>
+</div>
+
+<!-- php -->
+
 <form action="#" method="get">
-  <div class="action" onclick="actionTogle();">
-  <span>+</span>
+  <div class="action">
+  <span onclick="actionTogle();">+</span>
     <div class="review-container">
       <div class="row">
         <div class="col-12">

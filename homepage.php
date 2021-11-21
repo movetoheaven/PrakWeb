@@ -11,7 +11,7 @@
 <body>
 
 <div class="nav-container">
-    <div class="logo">
+    <div class="logo" >
       FPstudio
     </div>
 
@@ -27,7 +27,7 @@
               <i class="fa fa-caret-down"></i>
             </a>
             <div class="dropdown-content">
-              <a href="#">Photography</a>
+              <a href="porto_photography/porto-photo.php">Photography</a>
               <a href="#">Videography</a>
               <a href="#">UI</a>
               <a href="#">Web Development</a>
@@ -46,7 +46,7 @@
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-    <a href="#"><button class="contact">Contact Us</button></a>
+    <a href="contact/contact_us.php"><button class="contact">Contact Us</button></a>
   
   </div>
 

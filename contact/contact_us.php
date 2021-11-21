@@ -30,7 +30,7 @@
               <i class="fa fa-caret-down"></i>
             </a>
             <div class="dropdown-content">
-              <a href="#">Photography</a>
+              <a href="../porto_photography/porto-photo.php">Photography</a>
               <a href="#">Videography</a>
               <a href="#">UI</a>
               <a href="#">Web Development</a>

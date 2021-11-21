@@ -40,8 +40,71 @@
           </div>
         </li>
     </ul>
-
     <a href="login_register/login.php"><button class="sign-in">Sign In</button></a>
 </div>
+
+<div class="content-container">
+  <div class="row">
+    <div class="col-2">
+      <img src="../images/bg_index.png" alt="" class="profile">
+      <p>Richard Koding</p>
+    </div>
+    <div class="col-9">
+      <div class="border">
+        <p>Review Here</p>
+      </div>
+      <!-- looping php -->
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+      <img src="../images/star.png" alt="">
+    </div>
+  </div>
+</div>
+
+<form action="#" method="get">
+  <div class="action" onclick="actionTogle();">
+  <span>+</span>
+    <div class="review-container">
+      <div class="row">
+        <div class="col-12">
+          <p>Rating Us!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <p>Richard Koding</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <textarea name="review" id="review"></textarea>
+        </div>  
+      </div>
+      <div class="row">
+          <div class="col-6">
+            <fieldset class="rating">
+              <input type="radio" name="rating" id="star5" value="5"><label for="star5"></label>
+              <input type="radio" name="rating" id="star4" value="4"><label for="star4"></label>
+              <input type="radio" name="rating" id="star3" value="3"><label for="star3"></label>
+              <input type="radio" name="rating" id="star2" value="2"><label for="star2"></label>
+              <input type="radio" name="rating" id="star1" value="1"><label for="star1"></label>
+            </fieldset>
+          </div>
+          <div class="col-6">
+              <button type="submit" value="submit">Submit</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script type="text/javascript">
+  function actionTogle(){
+    var action = document.querySelector('.action');
+    action.classList.toggle('active');
+  }
+</script>
 </body>
 </html>

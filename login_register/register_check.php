@@ -5,8 +5,8 @@ include '../db/connect.php';
     $pass = $_POST['pass'];
 
 
-if(!isset($user) | trim($user)=="" && !isset($email) | trim($email)=="" && !isset($pass) | trim($pass)==""){
-    $sql = "INSERT INTO users (username, email, password) values ('$user', '$email', '$pass')";
+if(!empty($user) && !empty($email) && !empty($pass)){
+    $sql = "INSERT INTO users (username, email, password, images) values ('$user', '$email', '$pass', 'default')";
     $insert = $connection->query($sql);
 
     if($insert){

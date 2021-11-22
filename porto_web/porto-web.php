@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="porto-photo.css">
+    <link rel="stylesheet" href="porto-web.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <title>Porto-Web</title>
+    <title>Porto-Photo</title>
 </head>
 <body>
 <div class="nav-container">
@@ -28,10 +28,10 @@
               <i class="fa fa-caret-down"></i>
             </a>
             <div class="dropdown-content">
-              <a href="porto-photo.php">Photography</a>
+              <a href="../porto_photography/porto-photo.php">Photography</a>
               <a href="#">Videography</a>
               <a href="#">UI</a>
-              <a href="../porto_web/porto-web.php">Web Development</a>
+              <a href="porto_web.php">Web Development</a>
               <a href="#">Android Development</a>
           </div>
         </li>
@@ -43,31 +43,31 @@
 <div class="content-container">
     <div class="row">
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/_DSC6912.jpg" alt="" class="fluid img-thumbnail">      
+        <img src="../images/web/Massimo Vignelli Website Concept (Community)_001.png" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/_DSC6983.jpg" alt="" class="fluid img-thumbnail">      
+        <img src="../images/web/Montblanc - Motorcycle website concept design (Community)_001.png" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/_DSC7315.jpg" alt="" class="fluid img-thumbnail">      
+        <img src="../images/web/Travel Landing Page (Community)_001.png" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/Photoshoot 1_210608_0.jpg" alt="" class="fluid img-thumbnail">      
+        <img src="" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/Photoshoot 1_210608_1.jpg" alt="" class="fluid img-thumbnail">      
+        <img src="" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/Photoshoot 1_210608.jpg" alt="" class="fluid img-thumbnail">      
+        <img src="" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/49406669_353809828683497_3895423681613073578_n(1).jpg" alt="" class="fluid img-thumbnail">      
+        <img src="" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/47581899_210948733191481_2521680363624509972_n(1).jpg" alt="" class="fluid img-thumbnail">      
+        <img src="" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/47691787_2114415475264198_1799322654904872533_n(1).jpg" alt="" class="fluid img-thumbnail">      
+        <img src="" alt="" class="fluid img-thumbnail">      
         </div>
     </div>
     </div>

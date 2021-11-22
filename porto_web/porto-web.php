@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="porto-web.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <title>Porto-Photo</title>
+    <title>Porto-Web</title>
 </head>
 <body>
 <div class="nav-container">
@@ -32,7 +32,7 @@
               <a href="#">Videography</a>
               <a href="#">UI</a>
               <a href="porto_web.php">Web Development</a>
-              <a href="#">Android Development</a>
+              <a href="../porto-android/porto-android.php">Android Development</a>
           </div>
         </li>
     </ul>

@@ -42,13 +42,25 @@
     </div>
     <div class="content">
         <div class="text">Sign Up</div>             
-        <form action="#" method="post">
+        <form action="register_check.php" method="post">
             <input class="input-form" type="text" name="user" placeholder="Username">
             <br>
             <input class="input-form" type="text" name="email" placeholder="Email">
             <br>
             <input class="input-form" type="password" name="pass" placeholder="Password">
-            <br>
+            <?php
+            if(isset($_GET['message'])){
+                if($_GET['message'] == "invalid"){
+                    echo "<p>Username already used!</p>";
+                }else if($_GET['message'] == "empty"){
+                    echo "<p>Field cannot be empty!</p>";
+                }
+
+                
+            }else{
+                echo "<br>";
+            }
+            ?>
             <button class="btn-input" type="submit" value="login">Sign Up</button>
             </form>
 

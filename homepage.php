@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,7 +40,24 @@
         </li>
     </ul>
 
-    <a href="login_register/login.php"><button class="sign-in">Sign In</button></a>
+    <?php
+      if(!empty($_SESSION['username'])){
+        ?>
+          <div class="dropdown">
+            <button class="sign-in">Profile <i class="fa fa-caret-down"></i> </button>
+            <div class="dropdown-content">
+                <a href="#">Setting</a>
+                <a href="logout.php">Logout</a>
+            </div>
+            
+          </div>
+          
+        <?php
+      }else{
+        echo "<a href='login_register/login.php'><button class='sign-in'>Sign In</button></a>";
+      }
+    ?>
+    
 </div>
 
 <div class="content-container">

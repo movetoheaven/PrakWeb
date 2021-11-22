@@ -45,23 +45,23 @@
 <div class="content-container">
     <div class="row justify-content-between">
         <div class="col-4">
-            <img src="#" alt="bla">
+            <img src="../images/53A159F4-7F04-47DE-BD3F-F2A1504C53C3-2.jpg" alt="bla" width="400" height="500" >
         </div>
         <div class="col-6">
             <div class="text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor eligendi aspernatur impedit quia placeat ipsam harum, eaque ea consequuntur. Quibusdam dignissimos quidem velit reiciendis unde dolores impedit provident vel!
+                Akhmal Dimas Pratama is 20 year old developer 
             </div>
         </div>
     </div>
-
+        <br>
     <div class="row justify-content-between">
+        <div class="col-4">
+            <img src="../images/12312312-2.jpg" alt="bla" width="400" height="500">
+        </div>
         <div class="col-6">
             <div class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus beatae quisquam quam dolorem fugit harum? Enim dignissimos, aspernatur distinctio harum praesentium soluta possimus dolor laudantium fugiat quibusdam facilis, delectus animi.
+            Ichvan Rachmawan is a 20 year old freelance photographer and videographer based in the Yogyakarta and South Tangerang area. His love for portrait and street photography has given him a unique look of style and pose.
             </div>
-        </div>
-        <div class="col-4">
-        <img src="#" alt="bla">
         </div>
     </div>
 </div>

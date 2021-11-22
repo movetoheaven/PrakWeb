@@ -43,31 +43,31 @@
 <div class="content-container">
     <div class="row">
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/_DSC6973.jpg" alt="" class="fluid img-thumbnail">      
+        <img src="../images/photography/_DSC6912.jpg" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
         <img src="../images/photography/_DSC6983.jpg" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/_DSC7070.jpg" alt="" class="fluid img-thumbnail">      
+        <img src="../images/photography/_DSC7315.jpg" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/_" alt="" class="fluid img-thumbnail">      
+        <img src="../images/photography/Photoshoot 1_210608_0.jpg" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/_" alt="" class="fluid img-thumbnail">      
+        <img src="../images/photography/Photoshoot 1_210608_1.jpg" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/_" alt="" class="fluid img-thumbnail">      
+        <img src="../images/photography/Photoshoot 1_210608.jpg" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/_" alt="" class="fluid img-thumbnail">      
+        <img src="../images/photography/49406669_353809828683497_3895423681613073578_n(1).jpg" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/_" alt="" class="fluid img-thumbnail">      
+        <img src="../images/photography/47581899_210948733191481_2521680363624509972_n(1).jpg" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/photography/_" alt="" class="fluid img-thumbnail">      
+        <img src="../images/photography/47691787_2114415475264198_1799322654904872533_n(1).jpg" alt="" class="fluid img-thumbnail">      
         </div>
     </div>
     </div>

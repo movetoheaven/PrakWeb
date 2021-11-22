@@ -42,11 +42,17 @@
     </div>
     <div class="content">
         <div class="text">Sign In</div>             
-        <form action="#" method="post">
+        <form action="login_check.php" method="post">
             <input class="input-form" type="text" name="user" placeholder="Username">
             <br>
             <input class="input-form" type="password" name="pass" placeholder="Password">
-            <br>
+            <?php
+            if(isset($_GET['message'])){
+                    echo "<p>Username/password wrong!</p>";  
+            }else{
+                echo "<br>";
+            }
+            ?>
             <button class="btn-input" type="submit" value="login">Sign In</button>
             </form>
 

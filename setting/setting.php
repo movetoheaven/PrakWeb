@@ -1,5 +1,18 @@
 <?php
     session_start();
+    if(empty($_SESSION['username'])){
+      header("location:../homepage.php");
+    }else{
+      $user = $_SESSION['username'];
+
+      include '../db/connect.php';
+      $sql = "SELECT * FROM users WHERE username = '$user';";
+      $query = $connection->query($sql);
+      $row = $query->fetch_object();
+
+      $name = $row->username;
+      $image = $row->images;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +73,11 @@
 <div class="content-container">
         <div class="row">
             <div class="col-4">
-                <img src="../images/users/default.png" alt="">
+              <?php
+                if($image == "default"){
+                  echo "<img src='../images/users/default.png' alt=''>";
+                }
+              ?>
                 <div class="side">
                     <a href="#"></a>
                     <button >UPLOAD</button>
@@ -83,7 +100,18 @@
             <div class="col-8">
                 <form action="change-username.php" method="post">
                     <label >Username</label> <br>
-                    <input type="text"  name='user'> <br>
+                    <input type="text"  name='user' placeholder="<?php echo $user?>"> <br>
+                    <?php 
+                      if(isset($_GET['message'])){
+                        if($_GET['message']=="invalid"){
+                          echo "<p>Username already used!</p>";
+                        }else if($_GET['message']=="same"){
+                          echo "<p>Username is same!</p>";
+                        }else if($_GET['message']=="empty"){
+                          echo "<p>Cannot be empty!</p>";
+                        }
+                      }
+                    ?>
                     <input type="submit" class="btn-input" value="Change Username">
 
                 </form>

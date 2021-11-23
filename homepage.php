@@ -47,7 +47,7 @@
             <button class="sign-in">Profile <i class="fa fa-caret-down"></i> </button>
             <div class="dropdown-content">
                 <a href="#">Setting</a>
-                <a href="logout.php">Logout</a>
+                <a href="logout.php?message=homepage">Logout</a>
             </div>
             
           </div>

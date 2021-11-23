@@ -49,14 +49,14 @@
             <button class="sign-in">Profile <i class="fa fa-caret-down"></i> </button>
             <div class="dropdown-content">
                 <a href="#">Setting</a>
-                <a href="logout.php">Logout</a>
+                <a href="../logout.php?message=about/about_us">Logout</a>
             </div>
             
           </div>
           
         <?php
       }else{
-        echo "<a href='login_register/login.php'><button class='sign-in'>Sign In</button></a>";
+        echo "<a href='../login_register/login.php'><button class='sign-in'>Sign In</button></a>";
       }
     ?>
 </div>

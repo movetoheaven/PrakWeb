@@ -1,5 +1,6 @@
 <?php
+    $loc = $_GET['message'];
     session_start();
     session_destroy();
-    header("location:homepage.php");
+    header("location:$loc.php");
 ?>

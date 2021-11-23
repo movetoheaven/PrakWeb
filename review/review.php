@@ -1,5 +1,8 @@
 <?php
   session_start();
+  if(!empty($_SESSION['username'])){
+      $user = $_SESSION['username'];
+  }
 ?>
 
 <!DOCTYPE html>
@@ -51,103 +54,71 @@
             <button class="sign-in">Profile <i class="fa fa-caret-down"></i> </button>
             <div class="dropdown-content">
                 <a href="#">Setting</a>
-                <a href="logout.php">Logout</a>
+                <a href="../logout.php?message=review/review">Logout</a>
             </div>
             
           </div>
           
         <?php
       }else{
-        echo "<a href='login_register/login.php'><button class='sign-in'>Sign In</button></a>";
+        echo "<a href='../login_register/login.php'><button class='sign-in'>Sign In</button></a>";
       }
     ?>
 </div>
 
-<div class="content-container">
-  <div class="row">
-    <div class="col-2">
-      <img src="../images/bg_index.png" alt="" class="profile">
-      <p>Richard Koding</p>
-    </div>
-    <div class="col-9">
-      <div class="border">
-        <p>Review Here</p>
-      </div>
-      <!-- looping php -->
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-    </div>
-  </div>
-</div>
+<?php
+  include '../db/connect.php';
+
+  $sql = "SELECT *, users.images FROM review INNER JOIN users ON review.username=users.username";
+  $review = $connection->query($sql);
+
+  while($row = $review->fetch_object()){
+    $reviewId = $row->reviewId;
+    $reviewUser = $row->username;
+    $reviewMessage = $row->message;
+    $reviewRating = $row->rating;
+    $reviewImage = $row->images;
+?>
 
 <div class="content-container">
   <div class="row">
     <div class="col-2">
-      <img src="../images/bg_index.png" alt="" class="profile">
-      <p>Richard Koding</p>
+      <?php
+        if($reviewImage == "default"){
+          echo "<img src='../images/users/default.png' alt='' class='profile'>";
+        }
+
+        echo "<p>$reviewUser</p>";
+      ?>
+      
     </div>
     <div class="col-9">
       <div class="border">
-        <p>Review Here</p>
+        <?php
+          echo "<p>$reviewMessage</p>";
+        ?>
       </div>
       <!-- looping php -->
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
+      <?php
+        for($i=0; $i<$reviewRating; $i++){
+          echo "<img src='../images/star.png' alt=''>";
+        }
+      ?>
     </div>
   </div>
 </div>
 
-<div class="content-container">
-  <div class="row">
-    <div class="col-2">
-      <img src="../images/bg_index.png" alt="" class="profile">
-      <p>Richard Koding</p>
-    </div>
-    <div class="col-9">
-      <div class="border">
-        <p>Review Here</p>
-      </div>
-      <!-- looping php -->
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-    </div>
-  </div>
-</div>
-
-<div class="content-container">
-  <div class="row">
-    <div class="col-2">
-      <img src="../images/bg_index.png" alt="" class="profile">
-      <p>Richard Koding</p>
-    </div>
-    <div class="col-9">
-      <div class="border">
-        <p>Review Here</p>
-      </div>
-      <!-- looping php -->
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-      <img src="../images/star.png" alt="">
-    </div>
-  </div>
-</div>
+<?php
+  }
+?>
 
 <!-- php -->
-
-<form action="#" method="get">
+<?php
+  if(!empty($_SESSION['username'])){
+?>
+<form action="review_process.php?" method="post">
   <div class="action">
-  <span onclick="actionTogle();">+</span>
+    <span onclick="actionTogle();">+</span>
     <div class="review-container">
       <div class="row">
         <div class="col-12">
@@ -156,7 +127,7 @@
       </div>
       <div class="row">
         <div class="col-6">
-          <p>Richard Koding</p>
+          <?php echo "<p>$user</p>"?>
         </div>
       </div>
       <div class="row">
@@ -181,6 +152,10 @@
     </div>
   </div>
 </form>
+
+<?php
+  }
+  ?>
 
 <script type="text/javascript">
   function actionTogle(){

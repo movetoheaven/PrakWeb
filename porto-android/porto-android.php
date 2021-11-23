@@ -52,22 +52,22 @@
         <img src="../images/android/Ichvan Bakery_010.png" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="" alt="" class="fluid img-thumbnail">      
+        <img src="../images/android/Food Delivery Application (Community)_008.png" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="" alt="" class="fluid img-thumbnail">      
+        <img src="../images/android/Food Delivery Application (Community)_007.png" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="" alt="" class="fluid img-thumbnail">      
+        <img src="../images/android/Food Delivery Application (Community)_009.png" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="" alt="" class="fluid img-thumbnail">      
+        <img src="../images/android/IMK UI BREAD_007.png" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="" alt="" class="fluid img-thumbnail">      
+        <img src="../images/android/IMK UI BREAD_006.png" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="" alt="" class="fluid img-thumbnail">      
+        <img src="../images/android/IMK UI BREAD_010.png" alt="" class="fluid img-thumbnail">      
         </div>
     </div>
     </div>

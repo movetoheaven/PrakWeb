@@ -45,9 +45,12 @@
 </div>
 <center>
 <h1 class="writing-sign">
-  Sorry! 
-  It's Under Construction.
+  Under Development.
 </h1>
+
+<h3>
+  Coming Soon!
+</h3>
 
 </center>
 

@@ -1,22 +1,18 @@
-<?php
-  session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="porto_ui.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <title>Porto-UI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="history.css">
+    <title>History</title>
 </head>
 <body>
 <div class="nav-container">
-    <div class="logo">
+    <div class="logo" >
       FPstudio
     </div>
 
@@ -34,25 +30,38 @@
             <div class="dropdown-content">
               <a href="../porto_photography/porto-photo.php">Photography</a>
               <a href="../porto_videography/porto-video.php">Videography</a>
-              <a href="porto_ui.php">UI</a>
+              <a href="../porto_ui/porto_ui.php">UI</a>
               <a href="../porto_web/porto-web.php">Web Development</a>
               <a href="../porto-android/porto-android.php">Android Development</a>
           </div>
         </li>
     </ul>
 
-    <a href="login_register/login.php"><button class="sign-in">Sign In</button></a>
+    <?php
+      if(!empty($_SESSION['username'])){
+        ?>
+          <div class="dropdown">
+            <button class="sign-in">Profile <i class="fa fa-caret-down"></i> </button>
+            <div class="dropdown-content">
+                <a href="../logout.php?message=homepage">Logout</a>
+            </div>
+            
+          </div>
+          
+        <?php
+      }else{
+        echo "<a href='login_register/login.php'><button class='sign-in'>Sign In</button></a>";
+      }
+    ?>
 </div>
-<center>
-<h1 class="writing-sign">
-  Under Development.
-</h1>
 
-<h3>
-  Coming Soon!
-</h3>
-
-</center>
+<table style="width:80%">
+    <tr>
+        <td>Subject</td>
+        <td>Message</td>
+        <td>Star</td>
+    </tr>
+</table>
 
 </body>
 </html>

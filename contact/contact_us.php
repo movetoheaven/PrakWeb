@@ -62,7 +62,11 @@
     ?>
 </div>
     <div class="content-container">
-    <h2>Contact Us!</h2>
+
+    <?php
+      if(!empty($_SESSION['username'])){
+      ?>
+        <h2>Contact Us!</h2>
     <h4>Lets work together!</h4>
     <form action="contact_process.php"  method="post">
         <div class="contact-form">Name</div>
@@ -126,6 +130,12 @@
 
     </form>
     </div>
+      <?php
+      }else{
+          echo "<center><h2 style='margin:300px 0 auto;'>Sorry you're not sign up!</h2></center>";
+      }
+    ?>
+    
     
 </body> 
 </html>

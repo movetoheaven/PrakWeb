@@ -52,22 +52,22 @@
         <img src="../images/web/Travel Landing Page (Community)_001.png" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="" alt="" class="fluid img-thumbnail">      
+        <img src="../images/web/web1.jpg" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="" alt="" class="fluid img-thumbnail">      
+        <img src="../images/web/gentium-designer-website-template.jpg" alt="" class="fluid img-thumbnail" >      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="" alt="" class="fluid img-thumbnail">      
+        <img src="../images/web/web2.jpg" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="" alt="" class="fluid img-thumbnail">      
+        <img src="../images/web/Active Free HTML Website Template.jpg" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="" alt="" class="fluid img-thumbnail">      
+        <img src="../images/web/Devfolio Free HTML Website Template.jpg" alt="" class="fluid img-thumbnail">      
         </div>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="" alt="" class="fluid img-thumbnail">      
+        <img src="../images/web/Nocobot Free HTML Website Template.jpg" alt="" class="fluid img-thumbnail">      
         </div>
     </div>
     </div>

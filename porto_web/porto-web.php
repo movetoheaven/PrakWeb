@@ -12,12 +12,9 @@
 </head>
 <body>
 <div class="nav-container">
-    <div class="logo">
-      FPstudio
-    </div>
-
+  <div class="logo"><a href="../index.php">FPstudio</a></div>
     <ul class="nav-item">
-        <li><a href="../index.php">home</a></li>
+        <li><a href="../homepage.php">home</a></li>
         <li><a href="../about/about_us.php">about us</a></li>
         <li><a href="../contact/contact_us.php">contacts</a></li>
         <li><a href="../review/review.php">review</a></li>
@@ -36,8 +33,29 @@
           </div>
         </li>
     </ul>
-
-    <a href="login_register/login.php"><button class="sign-in">Sign In</button></a>
+    <?php
+      if(!empty($_SESSION['username'])){
+        ?>
+          <div class="dropdown">
+            <button class="sign-in">Profile <i class="fa fa-caret-down"></i> </button>
+            <div class="dropdown-content">
+              <?php
+                if($_SESSION['username']=="admin"){
+                  echo "<a href='../admin/admin.php'>Admin</a>";
+                }else{
+                  echo "<a href='../setting/setting.php'>Setting</a>";
+                }
+              ?>
+                <a href="../logout.php?message=porto_photography/porto-photo">Logout</a>
+            </div>
+            
+          </div>
+          
+        <?php
+      }else{
+        echo "<a href='../login_register/login.php'><button class='sign-in'>Sign In</button></a>";
+      }
+    ?>
 </div>
 
 <div class="content-container">

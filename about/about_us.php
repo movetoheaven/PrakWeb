@@ -17,12 +17,9 @@
 </head>
 <body>
 <div class="nav-container">
-    <div class="logo">
-      FPstudio
-    </div>
-
+  <div class="logo"><a href="../index.php">FPstudio</a></div>
     <ul class="nav-item">
-        <li><a href="../index.php">home</a></li>
+        <li><a href="../homepage.php">home</a></li>
         <li><a href="about_us.php">about us</a></li>
         <li><a href="../contact/contact_us.php">contacts</a></li>
         <li><a href="../review/review.php">review</a></li>
@@ -48,7 +45,13 @@
           <div class="dropdown">
             <button class="sign-in">Profile <i class="fa fa-caret-down"></i> </button>
             <div class="dropdown-content">
-                <a href="#">Setting</a>
+              <?php
+                if($_SESSION['username']=="admin"){
+                  echo "<a href='../admin/admin.php'>Admin</a>";
+                }else{
+                  echo "<a href='../setting/setting.php'>Setting</a>";
+                }
+              ?>
                 <a href="../logout.php?message=about/about_us">Logout</a>
             </div>
             

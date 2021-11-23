@@ -42,11 +42,16 @@ body {
   }
   
   .logo{
-    font-family: "Poppins", sans-serif;
+    text-align: center;
+  }
+  
+  .logo a{
+    cursor: pointer;
+    color: #000000;
+    text-decoration: none;
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
-    line-height: 60px;
   }
   
   .nav-item li{

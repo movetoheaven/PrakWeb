@@ -10,9 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="porto-video.css">
+    <link rel="stylesheet" href="porto_ui.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <title>Porto-Video</title>
+    <title>Porto-UI</title>
 </head>
 <body>
 <div class="nav-container">
@@ -32,9 +32,9 @@
               <i class="fa fa-caret-down"></i>
             </a>
             <div class="dropdown-content">
-              <a href="porto-photo.php">Photography</a>
-              <a href="porto-video.php">Videography</a>
-              <a href="../porto_ui/porto_ui.php">UI</a>
+              <a href="../porto_photography/porto-photo.php">Photography</a>
+              <a href="../porto_videography/porto-video.php">Videography</a>
+              <a href="porto_ui.php">UI</a>
               <a href="../porto_web/porto-web.php">Web Development</a>
               <a href="../porto-android/porto-android.php">Android Development</a>
           </div>
@@ -50,8 +50,6 @@
 </h1>
 
 </center>
-
-
 
 </body>
 </html>

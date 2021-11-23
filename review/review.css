@@ -302,3 +302,25 @@ body{
   transition: 0.5s;
   bottom: 60px;
 }
+
+.under-review{
+  display: flex;
+  justify-content: space-between;
+}
+
+.del button{
+  color: white;
+  background: #f44336;
+  border: 2px solid #f44336;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 10px 10px 0 0;
+  letter-spacing: 0.02em;
+}
+
+.del button:hover {
+  border: 2px solid #f44336;
+  color: black;
+  background: white;
+}

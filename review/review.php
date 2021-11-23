@@ -101,12 +101,33 @@
           echo "<p>$reviewMessage</p>";
         ?>
       </div>
-      <!-- looping php -->
-      <?php
-        for($i=0; $i<$reviewRating; $i++){
-          echo "<img src='../images/star.png' alt=''>";
+      <div class="under-review">
+        <div class="star-container">
+          <?php
+          for($i=0; $i<$reviewRating; $i++){
+            echo "<img src='../images/star.png' alt=''>";
+          }
+          ?>
+        </div>
+        <?php 
+        if(!empty($_SESSION['username'])){
+          if($_SESSION['username']=="admin"){
+            ?>
+            <div class="del">
+              <a href="delete.php?id=<?php echo $reviewId ?>"><button>Delete</button></a>
+            </div>
+            <?php
+          }else if($_SESSION['username']==$reviewUser){
+          ?> 
+          <div class="del">
+            <a href="delete.php?id=<?php echo $reviewId ?>"><button>Delete</button></a>
+          </div>
+          <?php
+          }
         }
-      ?>
+        ?>
+      </div>
+      
     </div>
   </div>
 </div>
@@ -115,7 +136,6 @@
   }
 ?>
 
-<!-- php -->
 <?php
   if(!empty($_SESSION['username'])){
 ?>

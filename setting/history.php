@@ -55,7 +55,7 @@
     ?>
 </div>
 
-<table style="width:80%">
+<table>
     <tr>
         <td>Subject</td>
         <td>Message</td>

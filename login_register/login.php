@@ -19,9 +19,9 @@
 
         <ul class="nav-item">
             <li><a href="../index.php">home</a></li>
-            <li><a href="portofilio.php">about us</a></li>
-            <li><a href="#">contacts</a></li>
-            <li><a href="#">review</a></li>
+            <li><a href="../about/about_us.php">about us</a></li>
+            <li><a href="../contact/contact_us.php">contacts</a></li>
+            <li><a href="../review/review.php">review</a></li>
 
             <li>
             <div class="dropdown">
@@ -29,10 +29,10 @@
                 <i class="fa fa-caret-down"></i>
                 </a>
                 <div class="dropdown-content">
-                <a href="#">Photography</a>
+                <a href="../porto_photography/porto-photo.php">Photography</a>
                 <a href="#">Videography</a>
                 <a href="#">UI</a>
-                <a href="#">Web Development</a>
+                <a href="../porto_web/porto-web.php">Web Development</a>
                 <a href="#">Android Development</a>
             </div>
             </li>

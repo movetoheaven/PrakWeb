@@ -64,7 +64,7 @@
     <div class="content-container">
     <h2>Contact Us!</h2>
     <h4>Lets work together!</h4>
-    <form action="#"  method="post">
+    <form action="contact_process.php"  method="post">
         <div class="contact-form">Name</div>
         <div class="row">
             <div class="col-6">
@@ -97,27 +97,27 @@
 
         <div class="contact-form">Work</div>
 
-        <input type="checkbox" id="Photographer" name="Work" value="Photographer">
+        <input type="checkbox" id="Photographer" name="Work[]" value="Photographer">
         <label for="Photographer">Photographer</label>
         
         <br>
 
-        <input type="checkbox" id="Videographer" name="Work" value="Videographer">
+        <input type="checkbox" id="Videographer" name="Work[]" value="Videographer">
         <label for="Videographer">Videographer</label>
         
         <br>
 
-        <input type="checkbox" id="UI" name="Work" value="UI">
+        <input type="checkbox" id="UI" name="Work[]" value="UI">
         <label for="UI">UI</label>
         
         <br>
 
-        <input type="checkbox" id="Web Developer" name="Work" value="Web Developer">
+        <input type="checkbox" id="Web Developer" name="Work[]" value="Web Developer">
         <label for="Web Developer">Web Developer</label>
 
         <br>
 
-        <input type="checkbox" id="Android Developer" name="Work" value="Android Developer">
+        <input type="checkbox" id="Android Developer" name="Work[]" value="Android Developer">
         <label for="Android Developer">Android Developer</label>
 
         <br>

@@ -116,10 +116,10 @@
             <td style="text-align: center;">
             <?php
                 if($progress=="Submitted"){
-                    echo "<a href='#?id=<?php echo $contactId ?>'><button class='process-btn'>Process</button></a>";
-                    echo "<a href='#?id=<?php echo $contactId ?>'><button class='done-btn'>Done</button></a>";
+                    echo "<a href='submit.php?id=$contactId'><button class='process-btn'>Process</button></a>";
+                    echo "<a href='done.php?id=$contactId'><button class='done-btn'>Done</button></a>";
                 }else if($progress=="On Process"){
-                    echo "<a href='#?id=<?php echo $contactId ?>'><button class='done-btn'>Done</button></a>";
+                    echo "<a href='done.php?id=$contactId'><button class='done-btn'>Done</button></a>";
                 }
             ?>
             </td>

@@ -32,7 +32,7 @@
 <div class="nav-container">
   <div class="logo"><a href="index.php">FPstudio</a></div>
     <ul class="nav-item">
-        <li><a href="../index.php">home</a></li>
+        <li><a href="../homepage.php">home</a></li>
         <li><a href="../about/about_us.php">about us</a></li>
         <li><a href="../contact/contact_us.php">contacts</a></li>
         <li><a href="../review/review.php">review</a></li>

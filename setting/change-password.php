@@ -10,7 +10,7 @@
 <div class="nav-container">
   <div class="logo"><a href="index.php">FPstudio</a></div>
     <ul class="nav-item">
-        <li><a href="index.php">home</a></li>
+        <li><a href="homepage.php">home</a></li>
         <li><a href="about/about_us.php">about us</a></li>
         <li><a href="contact/contact_us.php">contacts</a></li>
         <li><a href="review/review.php">review</a></li>
@@ -23,9 +23,9 @@
             <div class="dropdown-content">
               <a href="porto_photography/porto-photo.php">Photography</a>
               <a href="porto_videography/porto-video.php">Videography</a>
-              <a href="../porto_ui/porto_ui.php">UI</a>
-              <a href="../porto_web/porto-web.php">Web Development</a>
-              <a href="../porto-android/porto-android.php">Android Development</a>
+              <a href="porto_ui/porto_ui.php">UI</a>
+              <a href="porto_web/porto-web.php">Web Development</a>
+              <a href="porto-android/porto-android.php">Android Development</a>
           </div>
         </li>
     </ul>
@@ -55,7 +55,13 @@
     ?>
     
 </div>
-<form action="change-password-check.php" method=""></form>
+<form action="change-password-check.php" method="">
+  <input class="input-form" type="password" name="old-pass" placeholder="Old Password">
+  <br>
+  <input class="input-form" type="password" name="new-pass" placeholder="New Password">
+  <br>
+  <input class="input-form" type="password" name="confirm-new-pass" placeholder="Confirm New Password">
+</form>
 
 
 </body>

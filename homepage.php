@@ -30,9 +30,9 @@
             <div class="dropdown-content">
               <a href="porto_photography/porto-photo.php">Photography</a>
               <a href="porto_videography/porto-video.php">Videography</a>
-              <a href="../porto_ui/porto_ui.php">UI</a>
-              <a href="../porto_web/porto-web.php">Web Development</a>
-              <a href="../porto-android/porto-android.php">Android Development</a>
+              <a href="porto_ui/porto_ui.php">UI</a>
+              <a href="porto_web/porto-web.php">Web Development</a>
+              <a href="porto-android/porto-android.php">Android Development</a>
           </div>
         </li>
     </ul>
@@ -68,14 +68,14 @@
     <h1>Multimedia Service</h1>
     <h1>With Outstanding Quality</h1>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Establish from 2021 FPstudio is a brand new freelancer who consists of two people with two different background but in the same vision, doing their work like it's their final project. Their works including Photography, Videography, UI, Web Development, and Android Development.</p>
 
     <a href="contact/contact_us.php"><button class="contact">Contact Us</button></a>
   
   </div>
 
-  <div class="image">
-    <img src="#" alt="">
+  <div class="images">
+    <img src="images/home/photostest.jpg" alt="">
   </div>
 </div>
 

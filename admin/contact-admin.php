@@ -77,7 +77,59 @@
 </ul>  
 
 <div id="main" class="content-container">
-    <button class="openbtn" onclick="openNav()">☰ ADMIN MENU</button>  
+    <button class="openbtn" onclick="openNav()">☰ ADMIN MENU</button> 
+    <table>
+        <tr>
+            <th class="col-1">Name</th>
+            <th class="col-2">Email</th>
+            <th class="col-2">Subject</th>
+            <th class="col-4">Message</th>
+            <th class="col-2">Work</th>
+            <th class="col-1">Progress</th>
+            <th>Edit</th>
+        </tr>
+        <?php
+            if(!empty($_SESSION['username'])){
+                include '../db/connect.php';
+
+                $sql = "SELECT * FROM contact";
+                $select = $connection->query($sql);
+
+                while($row = $select->fetch_object()){
+                    $contactId = $row->contactId;
+                    $contactUser = $row->username;
+                    $name = $row->firstName;
+                    $email = $row->email;
+                    $subject = $row->subject;
+                    $message = $row->message;
+                    $work = $row->work;
+                    $progress = $row->progress;
+        ?>
+                    <!-- php -->
+        <tr>
+            <td class="col-1"><?php echo $name?></td>
+            <td class="col-2"><?php echo $email?></td>
+            <td class="col-2"><?php echo $subject?></td>
+            <td class="col-4"><?php echo $message?></td>
+            <td class="col-2"><?php echo $work?></td>
+            <td class="col-1"><?php echo $progress?></td>
+            <td style="text-align: center;">
+            <?php
+                if($progress=="Submitted"){
+                    echo "<a href='#?id=<?php echo $contactId ?>'><button class='process-btn'>Process</button></a>";
+                    echo "<a href='#?id=<?php echo $contactId ?>'><button class='done-btn'>Done</button></a>";
+                }else if($progress=="On Process"){
+                    echo "<a href='#?id=<?php echo $contactId ?>'><button class='done-btn'>Done</button></a>";
+                }
+            ?>
+            </td>
+        </tr>
+                    <!-- php -->
+        <?php
+                }
+            }
+        ?>
+    </table> 
 </div>
 
 <script>

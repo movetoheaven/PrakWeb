@@ -82,13 +82,13 @@
                     <a href="#"></a>
                     <button >UPLOAD</button>
                     <br>
-                    <a href="../setting/history.php" name="history">
+                    <a href="history.php">
                         <button>
                             HISTORY
                         </button>
                     </a>
                     <br>
-                    <a href="#">
+                    <a href="change-password.php">
                         <button>
                             CHANGE PASSWORD
                         </button>

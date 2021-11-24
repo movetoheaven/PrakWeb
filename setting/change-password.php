@@ -1,10 +1,23 @@
+<?php
+  session_start();
+  if(empty($_SESSION['username'])){
+    header("location:../homepage.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Change-Username</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="change-password.css">
+    
+    <title>Change-Password</title>
 </head>
 <body>
 <div class="nav-container">
@@ -55,14 +68,43 @@
     ?>
     
 </div>
-<form action="change-password-check.php" method="">
-  <input class="input-form" type="password" name="old-pass" placeholder="Old Password">
-  <br>
-  <input class="input-form" type="password" name="new-pass" placeholder="New Password">
-  <br>
-  <input class="input-form" type="password" name="confirm-new-pass" placeholder="Confirm New Password">
-</form>
 
+<div class="content-container">
+      <h2>Change Password</h2>
+
+  <form action="change-password-check.php" method="post">
+
+    <div class="input-box">
+      <label>Old Password</label><br>
+      <input class="input-form" type="password" name="old-pass">
+    </div>
+    
+    <div class="input-box">
+      <label>New Password</label><br>
+      <input class="input-form" type="password" name="new-pass">
+    </div>
+    
+    <div class="input-box">
+      <label>Confirm New Password</label><br>
+      <input class="input-form" type="password" name="confirm-new-pass">
+    </div>
+
+    <?php
+      if(isset($_GET['message'])){
+        if($_GET['message']=="invalid"){
+          echo "<p>Password wrong!</p>";  
+        }else{
+          echo "<p>Cannot be empty!</p>";  
+        }
+      }
+    ?>
+
+    <div class="input-box">
+      <button type="submit">Confirm</button>
+    </div>
+    
+  </form>
+</div>
 
 </body>
 </html>

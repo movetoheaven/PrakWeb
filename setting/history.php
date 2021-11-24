@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  if(empty($_SESSION['username'])){
+    header("location:../homepage.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +14,10 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="history.css">
+    <link rel="stylesheet" href="user-history.css">
     <title>History</title>
 </head>
+
 <body>
 <div class="nav-container">
   <div class="logo"><a href="index.php">FPstudio</a></div>
@@ -53,13 +61,55 @@
     ?>
 </div>
 
-<table>
+<div class="content-container">
+  <h2>History</h2>
+
+  <table>
     <tr>
-        <td>Subject</td>
-        <td>Message</td>
-        <td>Star</td>
+        <th class="col-1">Name</th>
+        <th class="col-2">Email</th>
+        <th class="col-2">Subject</th>
+        <th class="col-4">Message</th>
+        <th class="col-2">Work</th>
+        <th class="col-1">Progress</th>
     </tr>
-</table>
+    <?php
+      if(!empty($_SESSION['username'])){
+        $user = $_SESSION['username'];
+        include '../db/connect.php';
+
+        $sql = "SELECT * FROM contact WHERE username='$user'";
+        $select = $connection->query($sql);
+
+        while($row = $select->fetch_object()){
+          $contactId = $row->contactId;
+          $contactUser = $row->username;
+          $name = $row->firstName;
+          $email = $row->email;
+          $subject = $row->subject;
+          $message = $row->message;
+          $work = $row->work;
+          $progress = $row->progress;
+
+    ?>
+    <!-- php -->
+    <tr>
+        <td class="col-1"><?php echo $name?></td>
+        <td class="col-2"><?php echo $email?></td>
+        <td class="col-2"><?php echo $subject?></td>
+        <td class="col-4"><?php echo $message?></td>
+        <td class="col-2"><?php echo $work?></td>
+        <td class="col-1"><?php echo $progress?></td>
+    </tr>
+    <!-- php -->
+    <?php
+        }
+    }
+    ?>
+  </table>
+
+</div>
+
 
 </body>
 </html>

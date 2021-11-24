@@ -22,7 +22,7 @@
                 
         }
 
-        $sql = "INSERT INTO contact (username, firstName, lastName, email, subject, message, work) values ('$user','$first','$last','$email','$subject','$message', '$input')";
+        $sql = "INSERT INTO contact (username, firstName, lastName, email, subject, message, work, progress) values ('$user','$first','$last','$email','$subject','$message', '$input', 'Submitted')";
 
         $insert = $connection->query($sql);
         if($insert){

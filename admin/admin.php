@@ -68,11 +68,11 @@
 
 <ul id="mySidebar" class="nav-side">
     <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a></li>
-    <li><a href="#">Photography</a></li>
-    <li><a href="#">Videography</a></li>
-    <li><a href="#">UI</a></li>
-    <li><a href="#">Web Developer</a></li>
-    <li><a href="#">Android Developer</a></li>
+    <li><a href="upload-photography.php">Photography</a></li>
+    <li><a href="upload-videography.php">Videography</a></li>
+    <li><a href="upload-ui.php">UI</a></li>
+    <li><a href="upload-web.php">Web Developer</a></li>
+    <li><a href="upload-androidy.php">Android Developer</a></li>
     <li><a href="contact-admin.php">Contact</a></li>
 </ul>  
 

@@ -77,60 +77,46 @@
 </ul>  
 
 <div id="main" class="content-container">
-    <button class="openbtn" onclick="openNav()">☰ ADMIN MENU</button> 
-    <table>
-        <tr>
-            <th class="col-1">Name</th>
-            <th class="col-2">Email</th>
-            <th class="col-2">Subject</th>
-            <th class="col-4">Message</th>
-            <th class="col-2">Work</th>
-            <th class="col-1">Progress</th>
-            <th>Edit</th>
-        </tr>
+    <button class="openbtn" onclick="openNav()">☰ ADMIN MENU</button>  
+    <div class="row">
+        <div class="col-12">
+            <form action="upload.php?porto=photography" method="post" enctype="multipart/form-data">
+                <label >Photography</label> <br>
+                <input type="file"  name='upload'> <br>
+                    <?php 
+                    if(isset($_GET['message'])){
+                        if($_GET['message']=="invalid"){
+                            echo "<p>Wrong file extention!</p>";
+                        }else if($_GET['message']=="same"){
+                            echo "<p>Photo already exist!</p>";
+                        }else if($_GET['message']=="empty"){
+                            echo "<p>Cannot be empty!</p>";
+                        }
+                      }
+                    ?>
+                <input type="submit" class="btn-input" value="Upload" name="submit">
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
         <?php
-            if(!empty($_SESSION['username'])){
-                include '../db/connect.php';
+            include '../db/connect.php';
 
-                $sql = "SELECT * FROM contact";
-                $select = $connection->query($sql);
-
-                while($row = $select->fetch_object()){
-                    $contactId = $row->contactId;
-                    $contactUser = $row->username;
-                    $name = $row->firstName;
-                    $email = $row->email;
-                    $subject = $row->subject;
-                    $message = $row->message;
-                    $work = $row->work;
-                    $progress = $row->progress;
+            $sql="SELECT * FROM photography";
+            $data = $connection->query($sql);
+            while($row = $data->fetch_object()){
+                $photoId = $row->photoId;
+                $image = $row->images;
         ?>
-                    <!-- php -->
-        <tr>
-            <td class="col-1"><?php echo $name?></td>
-            <td class="col-2"><?php echo $email?></td>
-            <td class="col-2"><?php echo $subject?></td>
-            <td class="col-4"><?php echo $message?></td>
-            <td class="col-2"><?php echo $work?></td>
-            <td class="col-1"><?php echo $progress?></td>
-            <td style="text-align: center;">
-            <?php
-                if($progress=="Submitted"){
-                    echo "<a href='submit.php?id=$contactId'><button class='process-btn'>Process</button></a>";
-                    echo "<a href='done.php?id=$contactId'><button class='done-btn'>Done</button></a>";
-                }else if($progress=="On Process"){
-                    echo "<a href='done.php?id=$contactId'><button class='done-btn'>Done</button></a>";
-                }
-            ?>
-            </td>
-        </tr>
-                    <!-- php -->
+        <div class="col-sm-6 col-md-4 mb-3">
+        <img src="../images/photography/<?php echo $image ?>" alt="" class="fluid img-thumbnail"><br><br>
+        <a href="delete.php?porto=photography&id=<?php echo $photoId ?>"><button>Delete</button></a>
+        </div>
+
         <?php
-                }
             }
         ?>
-    </table> 
-</div>
 
 <script>
 function openNav() {

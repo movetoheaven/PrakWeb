@@ -28,10 +28,10 @@
                 </a>
                 <div class="dropdown-content">
                 <a href="../porto_photography/porto-photo.php">Photography</a>
-                <a href="#">Videography</a>
-                <a href="#">UI</a>
+                <a href="../porto_videography/porto-video.php">Videography</a>
+                <a href="../porto_ui/porto_ui.php">UI</a>
                 <a href="../porto_web/porto-web.php">Web Development</a>
-                <a href="#">Android Development</a>
+                <a href="../porto-android/porto-android.php">Android Development</a>
             </div>
             </li>
         </ul>

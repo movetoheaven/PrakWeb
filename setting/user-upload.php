@@ -98,9 +98,9 @@
                 
                 
             <div class="col-8">
-                <form action="upload-check.php" method="get">
+                <form action="upload-check.php" method="post" enctype="multipart/form-data">
                     <label >Photo</label> <br>
-                    <input type="file"  name='file'> <br>
+                    <input type="file"  name='upload'> <br>
                     <?php 
                       if(isset($_GET['message'])){
                         if($_GET['message']=="invalid"){
@@ -112,7 +112,7 @@
                         }
                       }
                     ?>
-                    <input type="submit" class="btn-input" value="Upload">
+                    <input type="submit" class="btn-input" value="Upload" name="submit">
 
                 </form>
             </div>

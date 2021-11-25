@@ -10,17 +10,18 @@
         $row = $query->fetch_object();
         $dbimage = $row->images;
 
-        if(isset($_FILES['file'])){
-            $name = $_FILES['file']['name'];
-            $image = $_FILES['file']['tmp_name'];
+        if(isset($_POST['submit'])){
+            $name = $_FILES['upload']['name'];
+            $image = $_FILES['upload']['tmp_name'];
             $check = getimagesize($image);
             
             if($check!==$_FILES['upload']['tmp_name']){
-                $newname = $user.".".$image;
+                $ext = pathinfo($name, PATHINFO_EXTENSION);
+                $newname = $user.".".$ext;
                 $loc = "../images/users/";
 
                 if($dbimage=="default"){
-                    move_uploaded_file($image, '');
+                    move_uploaded_file($image, $loc.$newname);
                     $sql = "UPDATE users SET images = '$newname' WHERE username = '$user';";
                     $upload = $connection->query($sql);
                     if($upload){
@@ -32,6 +33,8 @@
             }else{
                 header("location:user-upload.php?message=invalid");
             }
+        }else{
+            echo "HELLO";
         }
 
         

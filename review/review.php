@@ -88,7 +88,9 @@
     <div class="col-2">
       <?php
         if($reviewImage == "default"){
-          echo "<img src='../images/users/default.png' alt='' class='profile'>";
+          echo "<img style='width: 90px; height: 90px; object-fit: cover; border-radius:15px;' src='../images/users/default.png' alt='' class='profile'>";
+        }else{
+          echo "<img style='width: 90px; height: 90px; object-fit: cover; border-radius:15px;' src='../images/users/$reviewImage'>";
         }
 
         echo "<p>$reviewUser</p>";

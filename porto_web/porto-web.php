@@ -1,12 +1,5 @@
 <?php
     session_start();
-    if(!empty($_SESSION['username'])){
-        if($_SESSION['username']!="admin"){
-            header("location:../index.php");
-        }
-    }else{
-        header("location:../index.php");
-    }
 ?>
 
 <!DOCTYPE html>

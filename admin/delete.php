@@ -38,6 +38,22 @@ if(!empty($_SESSION['username'])){
         }else{
             header("location:upload-web.php?message=invalid");
         }
+    }else if($porto=="android"){
+        $loc = "../images/android/";
+        $sql = "SELECT * FROM android WHERE androidId=$id;";
+        $data = $connection->query($sql);
+        $row = $data->fetch_object();
+        $image = $row->images;
+
+        $sql = "DELETE FROM android WHERE androidId=$id;";
+        $delete = $connection->query($sql);
+
+        if($delete){
+            unlink($loc.$image);
+            header("location:upload-android.php");
+        }else{
+            header("location:upload-android.php?message=invalid");
+        }
     }
 
 }else{

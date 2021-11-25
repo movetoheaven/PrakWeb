@@ -64,38 +64,21 @@
 </div>
 
 <div class="content-container">
-    <div class="row">
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/android/Ichvan Bakery_009.png" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/android/Ichvan Bakery_001.png" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/android/Ichvan Bakery_010.png" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/android/Food Delivery Application (Community)_008.png" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/android/Food Delivery Application (Community)_007.png" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/android/Food Delivery Application (Community)_009.png" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/android/IMK UI BREAD_007.png" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/android/IMK UI BREAD_006.png" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/android/IMK UI BREAD_010.png" alt="" class="fluid img-thumbnail">      
-        </div>
-    </div>
-    </div>
-    </div>
+<div class="row">
+  <?php
+    include '../db/connect.php';
 
-
+    $sql="SELECT * FROM android";
+    $data = $connection->query($sql);
+    while($row = $data->fetch_object()){
+      $photoId = $row->androidId;
+      $image = $row->images;
+  ?>
+    <div class="col-sm-6 col-md-4 mb-3">
+      <img src="../images/android/<?php echo $image ?>" alt="" class="fluid img-thumbnail">
+    </div>
+  <?php
+    }
+  ?>
 </body>
 </html>

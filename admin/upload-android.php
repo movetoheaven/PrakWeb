@@ -80,8 +80,8 @@
     <button class="openbtn" onclick="openNav()">☰ ADMIN MENU</button>  
     <div class="row">
         <div class="col-12">
-            <form action="upload.php?porto=web" method="post" enctype="multipart/form-data">
-                <label >Web Developer</label> <br>
+            <form action="upload.php?porto=android" method="post" enctype="multipart/form-data">
+                <label >Android Developer</label> <br>
                 <input type="file"  name='upload'> <br>
                     <?php 
                     if(isset($_GET['message'])){
@@ -103,15 +103,15 @@
         <?php
             include '../db/connect.php';
 
-            $sql="SELECT * FROM web";
+            $sql="SELECT * FROM android";
             $data = $connection->query($sql);
             while($row = $data->fetch_object()){
-                $photoId = $row->webId;
+                $photoId = $row->androidId;
                 $image = $row->images;
         ?>
         <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/web/<?php echo $image ?>" alt="" class="fluid img-thumbnail"><br><br>
-        <a href="delete.php?porto=web&id=<?php echo $photoId ?>"><button>Delete</button></a>
+        <img src="../images/android/<?php echo $image ?>" alt="" class="fluid img-thumbnail"><br><br>
+        <a href="delete.php?porto=android&id=<?php echo $photoId ?>"><button>Delete</button></a>
         </div>
 
         <?php

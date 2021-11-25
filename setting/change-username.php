@@ -8,7 +8,16 @@ if(!empty($user)){
     if($user==$uname){
         header("location:setting.php?message=same");
     }else{
-        $sql = "UPDATE users SET username = '$user' WHERE username = '$uname';";
+        $sql = "SELECT * FROM users WHERE username='$uname'";
+
+        $select = $connection->query($sql);
+        $row = $select->fetch_object();
+        $dbimage = $row->images;
+
+        $path_info = pathinfo("../images/users/$dbimage", PATHINFO_EXTENSION);
+        rename("../images/users/$dbimage","../images/users/$user.$path_info");
+
+        $sql = "UPDATE users SET username = '$user', images= '$user.$path_info' WHERE username = '$uname';";
         $update = $connection->query($sql);
 
         if($update){

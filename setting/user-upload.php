@@ -79,9 +79,8 @@
                 }
               ?>
                 <div class="side">
-                    <a href="user-upload.php">
-                      <button >UPLOAD</button>
-                    </a>
+                    <a href="user-upload.php"></a>
+                    <button >UPLOAD</button>
                     <br>
                     <a href="history.php">
                         <button>
@@ -99,13 +98,13 @@
                 
                 
             <div class="col-8">
-                <form action="change-username.php" method="post">
-                    <label >Username</label> <br>
-                    <input type="text"  name='user' placeholder="<?php echo $user?>"> <br>
+                <form action="upload-check.php" method="get">
+                    <label >Photo</label> <br>
+                    <input type="file"  name='file'> <br>
                     <?php 
                       if(isset($_GET['message'])){
                         if($_GET['message']=="invalid"){
-                          echo "<p>Username already used!</p>";
+                          echo "<p>Wrong file extention!</p>";
                         }else if($_GET['message']=="same"){
                           echo "<p>Username is same!</p>";
                         }else if($_GET['message']=="empty"){
@@ -113,7 +112,7 @@
                         }
                       }
                     ?>
-                    <input type="submit" class="btn-input" value="Change Username">
+                    <input type="submit" class="btn-input" value="Upload">
 
                 </form>
             </div>

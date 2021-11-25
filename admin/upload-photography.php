@@ -72,7 +72,7 @@
     <li><a href="upload-videography.php">Videography</a></li>
     <li><a href="upload-ui.php">UI</a></li>
     <li><a href="upload-web.php">Web Developer</a></li>
-    <li><a href="upload-androidy.php">Android Developer</a></li>
+    <li><a href="upload-android.php">Android Developer</a></li>
     <li><a href="contact-admin.php">Contact</a></li>
 </ul>  
 

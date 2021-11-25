@@ -1,12 +1,5 @@
 <?php
-    session_start();
-    if(!empty($_SESSION['username'])){
-        if($_SESSION['username']!="admin"){
-            header("location:../index.php");
-        }
-    }else{
-        header("location:../index.php");
-    }
+  session_start();
 ?>
 
 <!DOCTYPE html>
@@ -78,6 +71,46 @@
 
 <div id="main" class="content-container">
     <button class="openbtn" onclick="openNav()">☰ ADMIN MENU</button>  
+    <div class="row">
+        <div class="col-12">
+            <form action="upload.php?porto=web" method="post" enctype="multipart/form-data">
+                <label >Web Developer</label> <br>
+                <input type="file"  name='upload'> <br>
+                    <?php 
+                    if(isset($_GET['message'])){
+                        if($_GET['message']=="invalid"){
+                            echo "<p>Wrong file extention!</p>";
+                        }else if($_GET['message']=="same"){
+                            echo "<p>Photo already exist!</p>";
+                        }else if($_GET['message']=="empty"){
+                            echo "<p>Cannot be empty!</p>";
+                        }
+                      }
+                    ?>
+                <input type="submit" class="btn-input" value="Upload" name="submit">
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <?php
+            include '../db/connect.php';
+
+            $sql="SELECT * FROM web";
+            $data = $connection->query($sql);
+            while($row = $data->fetch_object()){
+                $photoId = $row->webId;
+                $image = $row->images;
+        ?>
+        <div class="col-sm-6 col-md-4 mb-3">
+        <img src="../images/web/<?php echo $image ?>" alt="" class="fluid img-thumbnail"><br><br>
+        <a href="delete.php?porto=web&id=<?php echo $photoId ?>"><button>Delete</button></a>
+        </div>
+
+        <?php
+            }
+        ?>
+    </div>
 </div>
 
 <script>

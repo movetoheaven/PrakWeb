@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    if(!empty($_SESSION['username'])){
+        if($_SESSION['username']!="admin"){
+            header("location:../index.php");
+        }
+    }else{
+        header("location:../index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,39 +69,25 @@
     ?>
 </div>
 
+
 <div class="content-container">
-    <div class="row">
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/web/Massimo Vignelli Website Concept (Community)_001.png" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/web/Montblanc - Motorcycle website concept design (Community)_001.png" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/web/Travel Landing Page (Community)_001.png" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/web/web1.jpg" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/web/gentium-designer-website-template.jpg" alt="" class="fluid img-thumbnail" >      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/web/web2.jpg" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/web/Active Free HTML Website Template.jpg" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/web/Devfolio Free HTML Website Template.jpg" alt="" class="fluid img-thumbnail">      
-        </div>
-        <div class="col-sm-6 col-md-4 mb-3">
-        <img src="../images/web/Nocobot Free HTML Website Template.jpg" alt="" class="fluid img-thumbnail">      
-        </div>
-    </div>
-    </div>
-    </div>
+  <div class="row">
+  <?php
+    include '../db/connect.php';
 
-
+    $sql="SELECT * FROM web";
+    $data = $connection->query($sql);
+    while($row = $data->fetch_object()){
+      $photoId = $row->webId;
+      $image = $row->images;
+  ?>
+    <div class="col-sm-6 col-md-4 mb-3">
+      <img src="../images/web/<?php echo $image ?>" alt="" class="fluid img-thumbnail">
+    </div>
+  <?php
+    }
+  ?>
+  </div>
+</div>
 </body>
 </html>

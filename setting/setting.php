@@ -73,7 +73,7 @@
 <div class="content-container">
         <div class="row">
             <div class="col-4">
-              <div class="image-profile">
+              <!-- <div class="image-profile"> -->
                 <?php
                   if($image == "default"){
                     echo "<img style='width: 200px; height: 200px; object-fit: cover; border-radius:15px;' src='../images/users/default.png'>";
@@ -81,7 +81,7 @@
                     echo "<img style='width: 200px; height: 200px; object-fit: cover; border-radius:15px;' src='../images/users/$image'>";
                   }
               ?>
-              </div>
+              <!-- </div> -->
                 <div class="side">
                     <a href="user-upload.php">
                       <button >UPLOAD</button>

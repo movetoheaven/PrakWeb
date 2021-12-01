@@ -53,7 +53,7 @@
           <div class="dropdown">
             <button class="sign-in">Profile <i class="fa fa-caret-down"></i> </button>
             <div class="dropdown-content">
-                <a href="../logout.php?message=homepage">Logout</a>
+                <a href="../logout.php?message=index">Logout</a>
             </div>
             
           </div>
@@ -78,6 +78,22 @@
 
 <div id="main" class="content-container">
     <button class="openbtn" onclick="openNav()">☰ ADMIN MENU</button>  
+    <div class="row">
+        <div class="col-12">
+        <center>
+            <h1 class="writing-sign">
+            Under Development.
+            </h1>
+
+            <h3>
+            Coming Soon!
+            </h3>
+
+        </center>
+            
+        </div>
+    </div>
+
 </div>
 
 <script>

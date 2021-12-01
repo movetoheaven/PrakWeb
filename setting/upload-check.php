@@ -10,7 +10,7 @@
         $row = $query->fetch_object();
         $dbimage = $row->images;
 
-        if(isset($_POST['submit'])){
+        if(isset($_POST['submit'])&&!empty($_FILES['upload']['name'])){
             $name = $_FILES['upload']['name'];
             $image = $_FILES['upload']['tmp_name'];
             $check = getimagesize($image);
@@ -40,7 +40,7 @@
                 header("location:user-upload.php?message=invalid");
             }
         }else{
-            echo "HELLO";
+            header("location:user-upload.php?message=empty");
         }
 
         

@@ -73,10 +73,12 @@
 <div class="content-container">
         <div class="row">
             <div class="col-4">
-              <?php
-                if($image == "default"){
-                  echo "<img src='../images/users/default.png' alt=''>";
-                }
+            <?php
+                  if($image == "default"){
+                    echo "<img style='width: 200px; height: 200px; object-fit: cover; border-radius:15px;' src='../images/users/default.png'>";
+                  }else{
+                    echo "<img style='width: 200px; height: 200px; object-fit: cover; border-radius:15px;' src='../images/users/$image'>";
+                  }
               ?>
                 <div class="side">
                     <a href="user-upload.php"></a>
@@ -105,8 +107,6 @@
                       if(isset($_GET['message'])){
                         if($_GET['message']=="invalid"){
                           echo "<p>Wrong file extention!</p>";
-                        }else if($_GET['message']=="same"){
-                          echo "<p>Username is same!</p>";
                         }else if($_GET['message']=="empty"){
                           echo "<p>Cannot be empty!</p>";
                         }

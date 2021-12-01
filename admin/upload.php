@@ -6,7 +6,7 @@ if(!empty($_SESSION['username'])){
     $porto = $_GET['porto'];
 
     if($porto=="photography"){
-        if(isset($_POST['submit'])){
+        if(isset($_POST['submit'])&&!empty($_FILES['upload']['name'])){
             $name = $_FILES['upload']['name'];
             $image = $_FILES['upload']['tmp_name'];
             $check = getimagesize($image);
@@ -15,7 +15,7 @@ if(!empty($_SESSION['username'])){
                 $loc = "../images/photography/";
 
                 if(file_exists($loc.$name)){
-                    header("location:upload-photography.php?message=invalid");
+                    header("location:upload-photography.php?message=same");
                 }else{
                     move_uploaded_file($image, $loc.$name);
                     $sql = "INSERT INTO photography (images) VALUES ('$name');";
@@ -28,10 +28,10 @@ if(!empty($_SESSION['username'])){
                 header("location:upload-photography.php?message=invalid");
             }
         }else{
-            header("location:upload-photography.php?message=invalid");
+            header("location:upload-photography.php?message=empty");
         }
     }else if($porto=="web"){
-        if(isset($_POST['submit'])){
+        if(isset($_POST['submit'])&&!empty($_FILES['upload']['name'])){
             $name = $_FILES['upload']['name'];
             $image = $_FILES['upload']['tmp_name'];
             $check = getimagesize($image);
@@ -53,10 +53,10 @@ if(!empty($_SESSION['username'])){
                 header("location:upload-web.php?message=invalid");
             }
         }else{
-            header("location:upload-web.php?message=invalid");
+            header("location:upload-web.php?message=empty");
         }
     }else if($porto=="android"){
-        if(isset($_POST['submit'])){
+        if(isset($_POST['submit'])&&!empty($_FILES['upload']['name'])){
             $name = $_FILES['upload']['name'];
             $image = $_FILES['upload']['tmp_name'];
             $check = getimagesize($image);
@@ -78,7 +78,7 @@ if(!empty($_SESSION['username'])){
                 header("location:upload-android.php?message=invalid");
             }
         }else{
-            header("location:upload-android.php?message=invalid");
+            header("location:upload-android.php?message=empty");
         }
     }
 

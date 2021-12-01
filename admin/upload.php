@@ -40,7 +40,7 @@ if(!empty($_SESSION['username'])){
                 $loc = "../images/web/";
 
                 if(file_exists($loc.$name)){
-                    header("location:upload-web.php?message=invalid");
+                    header("location:upload-web.php?message=same");
                 }else{
                     move_uploaded_file($image, $loc.$name);
                     $sql = "INSERT INTO web (images) VALUES ('$name');";
@@ -65,7 +65,7 @@ if(!empty($_SESSION['username'])){
                 $loc = "../images/android/";
 
                 if(file_exists($loc.$name)){
-                    header("location:upload-android.php?message=invalid");
+                    header("location:upload-android.php?message=same");
                 }else{
                     move_uploaded_file($image, $loc.$name);
                     $sql = "INSERT INTO android (images) VALUES ('$name');";

@@ -72,7 +72,7 @@
         </div>
         <div class="col-6">
             <div class="text">
-                Akhmal Dimas Pratama is 20 year old developer 
+                Akhmal Dimas Pratama is 20 year old developer, intrested in Android and Web development based in Yogyakarta.
             </div>
         </div>
     </div>

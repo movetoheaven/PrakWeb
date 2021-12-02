@@ -29,7 +29,7 @@
     <ul class="nav-item">
         <li><a href="../homepage.php">home</a></li>
         <li><a href="../about/about_us.php">about us</a></li>
-        <li><a href="contact_us.php">contacts</a></li>
+        <li><a href="../contact/contact_us.php">contacts</a></li>
         <li><a href="../review/review.php">review</a></li>
 
         <li>

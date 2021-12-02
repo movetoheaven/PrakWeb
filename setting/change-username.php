@@ -13,11 +13,16 @@ if(!empty($user)){
         $select = $connection->query($sql);
         $row = $select->fetch_object();
         $dbimage = $row->images;
+        if ($dbimage!="default"){
+            $path_info = pathinfo("../images/users/$dbimage", PATHINFO_EXTENSION);
+            rename("../images/users/$dbimage","../images/users/$user.$path_info");
 
-        $path_info = pathinfo("../images/users/$dbimage", PATHINFO_EXTENSION);
-        rename("../images/users/$dbimage","../images/users/$user.$path_info");
+            $sql = "UPDATE users SET username = '$user', images= '$user.$path_info' WHERE username = '$uname';";
+        } else{
+            $sql = "UPDATE users SET username = '$user' WHERE username = '$uname';";
+        }
 
-        $sql = "UPDATE users SET username = '$user', images= '$user.$path_info' WHERE username = '$uname';";
+        
         $update = $connection->query($sql);
 
         if($update){
